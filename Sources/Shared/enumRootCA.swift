@@ -1,5 +1,5 @@
 //
-//  enumRootCA.swift
+//  Shared/enumRootCA.swift
 //  QYQTexasPlaygroundPackage
 //
 //  Created by QYQTexas on 2025/9/19.
@@ -42,7 +42,7 @@ enum RootCA{
     uzxjhdw8Tw==
     -----END CERTIFICATE-----
     """
-    static let privateKeyPem = """
+    static let privateKeyPkcs1RsaPem = """
     -----BEGIN RSA PRIVATE KEY-----
     MIIJKQIBAAKCAgEAxN2Tw55fkriwlHKap7Jps/yeyNVF36doNDvtY9S9nJxXWCcx
     x8+qUZ2wyJ6SxooyKq4mKYV4l4FDMHCR5iGLAMBtjA7lXEuMJtLIX/MkPw0V4NtA
@@ -149,6 +149,61 @@ enum RootCA{
     l2MdGrBBRpCAl1coYza0ij7Fnf8fECVPPUAQVBMRGRmdaOsiSzLm3wtjOh4rcoRc
     ePd3CzHQ1+1W3SdOI6cPbnYmhnv0h0/4wiOMaiHdCEmz3Ps/BfXtOK0n8yMDGtii
     tYHMKCN3PRkiaNBw4EO09rUq1OHoGNU=
+    -----END PRIVATE KEY-----
+    """
+    
+    static let privateKeyWrong =
+    """
+    -----BEGIN PRIVATE KEY-----
+    MIIJKQIBAAKCAgEAxN2Tw55fkriwlHKap7Jps/yeyNVF36doNDvtY9S9nJxXWCcx
+    x8+qUZ2wyJ6SxooyKq4mKYV4l4FDMHCR5iGLAMBtjA7lXEuMJtLIX/MkPw0V4NtA
+    fd6sQb02vXHzHbes7LqoMRzUua2q2+dvc+5FQRPzODQnTVlUvYguTKmbUp8Jlgr+
+    liSffZT4I6a/E5YTI0Vu1KkS2hdZ5F/W4H7rehHmrhEJz8TWqgBXsfALx8w2xMKo
+    44e6nJrtis6PnZ1C88NJ5BX/7bjWyulmVIk/jySbG4nJ6pzAL3BkBbHcDgeui2os
+    RleobbLZ7DJ1sfgxlee0fIJecyc18K8wBP+Svz+pBS4ijqk9FHnD+GZ64MgAg0Km
+    YnempvNhF6oyf40IDF2XPkUQWtAfD5QXJD1b1E2gn0edBSdHi046RSA5wVdyzEBZ
+    AWjmL9zNWNqEMzVwnlhIWKhuOUoU5wvcIx29FCbjvR35m16fYV07eR9ipNCFD2y7
+    fvOmo3vj+72u5PsB2udY6xAZQV42rkrPbhD69Wkv5nrJg9QYeknSGHyltmUjjzKh
+    iy495PhCMcx5SEdKJUsRzO0xbs7xVGn8VYh/ii4wQHh+xfaq87aC06J3HsduTG60
+    HWZRNywMFf72FN+g0DYDUIlif2cIx8Lehu8nnVuHXWIX6w8ouayVr3z2dD8CAwEA
+    AQKCAgEAqR/qR84RMU01dfKW5qahpJzMFKEUbDW3kdhB8tfbJWYyq2rQm2XOXlto
+    epGwapxiyMPfyR//H7lO7Zhn3xrF/hlSg1ZwuL+2YcwHlFaftwMY3pm9Z+Uae0eA
+    dXQldkxLZPxebgLkxbdq54yF9USnfmcTNh+n/A1YfZM2o2m6JFq4s4wydu5zjkGi
+    g45G7R6qxkxqEIxHw9D3yviC805WIgKq+LNuiG4ENPwiWp1soXLRQmwxB3edW9jF
+    ZdBbFP77e8sz+Zzkx2daL+wfm1RlpCXAkwHm04Vind6iLzpDYFI9I0xNSQkZi1Rx
+    XzdiYUhl4PCz35toZOk0r9bxG/osKFgmhquMy/G96mmBQFJmuq+BMzdMkWHkVjbR
+    9lLo6k9dWGXl67u/J0YCXaz5fpu15X1nEwuuz3sPmBZD6BF2dJmhGa2V2wMv/Omh
+    KaNhl27SYltjuorCQs2lsSvf77DGMbl4XTfdY2PZ/afQ3gAm0zAUP8Ji2zxJOIyf
+    wJdDO0haWNff4YljMaTNS2STo/SEdK+ZRFEZvgtDTQJ8QXWccwX8pBZYyPDdroRx
+    iABDAsgvYjvtuqp7t2FwTCva6YgfprxanS2xQdNb+/SziTEPFAUxCdktg5N9OsEG
+    2S6du0jbr3xnOeNuQiuj7MwW8+tBs9av2s4usMpTKDLzaBgoIfECggEBAP94q+cK
+    uXvYILaH33rmcNM6GVmwQC9P20TaWTFmATeNiPGWmoIU+uZvtT7PPecRyvoZ7PKe
+    8xctmA3odcpl4tb0KFSw4q9VA9XZJ0vKWFD0IN9WTtEmaD1DAAZmE9E4eKYmiMaU
+    rEguSX9VZdaFRiPUuucVfTxQTcCjPQplWPPNJN3mdiFj0akSduibzraKXH9G9qks
+    3ViddU7WPffi+5oBsoiB6IFc6zm3OYoo2wo27dcZWbd//L/JVDDgXfueWhB5Hgah
+    7M+G4jlGQ+XFR1G9L3B9X9e6aFWbjoUT6WdUXVeg/AfAfOJF6S/KdonOJ4zMXjwM
+    UrjfLBtIjIDH5PMCggEBAMVF3GkBoL/AN49GM4xq2KudpuZjjoPb/gUUmjOnI7/H
+    GkFehqK7Mek5CzOliBVSGOFALl5CfLTnWNRuOf/e2FhUI5OO1iRzhD99Yt7tiBBt
+    rhbJU2O2ceI7OSic4hvGklslFHnBzamJfC56BgDGOFAPzo7k4hCCVghCCjFNFP3z
+    OJiGoSi0rUgl198xApfnLy3+2nAETjaUZihrev0Ze1W5OmrTn5y+WV/SSmCL55TS
+    DrmVdg4deLqTfdXTvyekVAcMJUos4ELutXvkm0iVaNK50gXKuH8LSh8QiLAiDec6
+    y8mg94vhg4Yf9fkMaDIbhr0LXGx4V/UTHXMOnKc59oUCggEBANU0OhJ5qs6mUrbC
+    skl5I9PEev+UzhwuAwp1R1aokH9ySUWFsLC7HaFOvO4MOtcqzEDpfgwFh05iqLGC
+    vTsKyMMnxLjZXnWA99ByiA8Cca4t73k0KFb4PKpTziOI8ST8ggP3yNIhpZ4fswrn
+    lDPxydWBZfIQxxGc2ybXlMumRRRCsm/WM+Qtz/3QARijX2KMGiHGcXhCjv+zeQEw
+    X0sPTXb7z6mI8Sd1CoKCXSzmZ9cgfGG1MGCqGZ9dQDwCI60oPHXe/qX+YQnYwdeW
+    wndxqtGWl47Ds0bwtL4tMkXxliq8B6JoIa2+gPq96ZwO1dqwB+XDcSmgBzFuXvru
+    EwQuzu0CggEAW12UzKltWwHaeagI3eLqgOleUFwRuG5eQtoc5QlnHD5Jobb24k2S
+    uzKpRn1G/qDsVv7TuuJOQbbYRGLcx+3dA2PMql3APlemC4W2EguvNfSmaXVLAuaP
+    7jiBq5alfjnEtSQCTLX+26OKeTgYqakkkagQgcvuC7lhwSdc8yKBM3C/aJ0J7QFp
+    M/4a8gsP6WywRDxBzRmhY9PtUJEfADQaFETaknl69iyO1jteKUMCucFkAn3/lF//
+    92GyKSON5/1K0YzFhIouP7GxKjVh2gcg6mAXrokKVATVines5u6Ow+ZOVg8QN5/1
+    u1v4HyWo6HQpPksRvkcqbZ4xyIUe9rB4xQKCAQBrn7mrfn4HdZlci/Q8n7a2GPhd
+    rG6LVLHdnp9J1iq7xz7mfAiKcLmx6xmKm73+V10QYoObNcDepNAnhlE42+iO6mi5
+    rRUANrLj7aNYod4Trrbim8CuHCba1+v4fU6DUQT3fubiz4O90uQSbOW2C9zCvWGT
+    2GwfTNiDwhiMSMipilAu9SfQx54SLpdjHRqwQUaQgJdXKGM2tIo+xZ3/HxAlTz1A
+    EFQTERkZnWjrIksy5t8LYzoeK3KEXHj3dwsx0NftVt0nTiOnD252JoZ79IdP+MIj
+    jGoh3QhJs9z7PwX17TitJ/MjAxrYorWBzCgjdz0ZImjQcOBDtPa1KtTh6BjV
     -----END PRIVATE KEY-----
     """
 }
